@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+
+  onLoadServers() {
+    // complex code that connects to a backend
+   
+    // navigation to Servers page 
+
+    this.router.navigate(["/servers"])
+  }
+
+
+  onLoadServer(id: number) {
+    // complex code that connects to a backend
+   
+    // navigation to Servers page
+    this.router.navigate(['/servers', id, 'edit'], { queryParams: { allowEdit: '8' }, fragment: 'loading' });
   }
 
 }

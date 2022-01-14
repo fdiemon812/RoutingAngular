@@ -4,6 +4,7 @@ import { ServersComponent } from './servers/servers.component';
 import { ServerComponent } from './server/server.component';
 import { EditServerComponent } from './edit-server/edit-server.component';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from '../app.routing';
 
 
 
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   exports: [
     ServersComponent
